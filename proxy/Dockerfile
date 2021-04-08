@@ -7,8 +7,8 @@ EXPOSE 80
 RUN apk update && \
     apk add --no-cache tzdata
 
-ENV TZ Asia/Taipei
-RUN echo "Asia/Taipei" > /etc/timezone
+ENV TZ "Asia/Taipei"
+#RUN echo "Asia/Taipei" > /etc/timezone
 
 # Run the nginx server
 CMD ["nginx", "-g", "daemon off;"]

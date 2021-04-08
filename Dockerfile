@@ -17,7 +17,6 @@ ADD extra/install_python.sh extra/requirements.txt /tmp/
 RUN /bin/bash /tmp/install_python.sh && rm /tmp/install_python.sh && rm /tmp/requirements.txt
 
 ENV TZ "Asia/Taipei"
-RUN echo "Asia/Taipei" > /etc/timezone
-RUN dpkg-reconfigure -f noninteractive tzdata
+#RUN echo "Asia/Taipei" > /etc/timezone
 
 ENV THEIA_WEBVIEW_EXTERNAL_ENDPOINT="{{hostname}}"

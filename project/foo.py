@@ -11,3 +11,12 @@ axs[0, 1].plot(data[0], data[1])
 axs[1, 1].hist2d(data[0], data[1])
 
 plt.show()
+
+
+
+from datetime import datetime
+
+now = datetime.now()
+
+current_time = now.strftime("%H:%M:%S")
+print("Current Time =", current_time)

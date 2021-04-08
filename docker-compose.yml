@@ -6,7 +6,6 @@ services:
         ports:
             - "8080:80"
     theia:
-        restart: always
         build:
             context: .
         ports:
