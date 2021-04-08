@@ -10,3 +10,4 @@ services:
             context: .
         ports:
             - "30000:3000"
+            - "38888:8888"
