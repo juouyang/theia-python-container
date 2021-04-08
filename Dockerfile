@@ -1,5 +1,5 @@
-#FROM theiaide/theia-python:1.11.0-next.c9db9754
-FROM theiaide/theia-python:next
+FROM theiaide/theia-python:1.11.0-next.c9db9754
+#FROM theiaide/theia-python:next
 
 RUN apt-get update \
     && apt-get upgrade -yq --no-install-recommends \
@@ -11,7 +11,13 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/* \
     && rm -rf /tmp/*
 
+COPY project/ /home/project
+
 ADD extra/install_python.sh extra/requirements.txt /tmp/
 RUN /bin/bash /tmp/install_python.sh && rm /tmp/install_python.sh && rm /tmp/requirements.txt
+
+ENV TZ "Asia/Taipei"
+RUN echo "Asia/Taipei" > /etc/timezone
+RUN dpkg-reconfigure -f noninteractive tzdata
 
 ENV THEIA_WEBVIEW_EXTERNAL_ENDPOINT="{{hostname}}"
