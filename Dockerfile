@@ -11,8 +11,6 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/* \
     && rm -rf /tmp/*
 
-COPY project/ /home/project
-
 ADD extra/install_python.sh extra/requirements.txt /tmp/
 RUN /bin/bash /tmp/install_python.sh && rm /tmp/install_python.sh && rm /tmp/requirements.txt
 
