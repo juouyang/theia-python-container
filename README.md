@@ -4,8 +4,9 @@
 
 ```
 bash build.sh
+docker run --rm -it -p 3000:3000 theia-python:aicots
 ```
 
 ## Access theia-python in docker
 
-http://<your_local_lan_ip>:30000
+http://localhost:3000
