@@ -3,13 +3,9 @@
 ## TL;DR
 
 ```
-docker-compose up --build
+bash build.sh
 ```
 
-## Access theia-python in docker (with or without nginx reverse_proxy)
-
-http://<your_local_lan_ip>:8080
-
-or
+## Access theia-python in docker
 
 http://<your_local_lan_ip>:30000
