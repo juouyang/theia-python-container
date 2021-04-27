@@ -8,3 +8,4 @@ paho-mqtt==1.5.1
 #psutil==5.8.0
 getmac==0.8.2
 matplotlib
+pylint
