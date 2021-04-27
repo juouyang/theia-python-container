@@ -8,4 +8,4 @@ RUN update-alternatives --install /usr/bin/python python /usr/local/bin/python3.
     && rm -rf /tmp/*
 
 ENV TZ "Asia/Taipei"
-#ENV THEIA_WEBVIEW_EXTERNAL_ENDPOINT="{{hostname}}"
+ENV THEIA_WEBVIEW_EXTERNAL_ENDPOINT="{{hostname}}"
