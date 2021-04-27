@@ -96,3 +96,9 @@ openssl verify -CAfile myCA.pem -verify_hostname bar.mydomain.com mydomain.com.c
 
 https://stackoverflow.com/questions/44550970/firefox-54-stopped-trusting-self-signed-certs
     https://deliciousbrains.com/ssl-certificate-authority-for-local-https-development/
+
+
+
+https://docs.microsoft.com/en-us/troubleshoot/windows-server/identity/valid-root-ca-certificates-untrusted#examples-of-alternative-methods-for-publishing-root-ca-certificates
+
+Method 2: Start certlm.msc (the certificates management console for local machine) and import the root CA certificate in the Registry physical store.
