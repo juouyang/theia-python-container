@@ -3,12 +3,13 @@
 ## TL;DR
 
 ```
-bash build.sh
-docker run --rm -it -p 3000:3000 theia-python:aicots
+docker-compose up --build
 ```
 
-## Access theia-python in docker
+## Access theia-python in docker (with or without nginx reverse_proxy)
 
-webviews work only in secure context, localhost or https
+http://<your_local_lan_ip>:8080
 
-http://127.0.0.1:3000
+or
+
+http://<your_local_lan_ip>:30000
