@@ -10,4 +10,4 @@ services:
         build:
             context: .
         ports:
-            - "30000:3000"
+            - "3000:3000"

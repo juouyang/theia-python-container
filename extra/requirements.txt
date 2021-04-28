@@ -4,8 +4,7 @@ pandas==1.1.5
 sqlalchemy==1.4.0
 requests==2.22.0
 paho-mqtt==1.5.1
-#shioaji==0.3.1.dev8
-#psutil==5.8.0
 getmac==0.8.2
 matplotlib
-pylint
+pylint==2.7.4
+jupyter==1.0.0
