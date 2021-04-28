@@ -1,6 +1,6 @@
 FROM theiaide/theia-python:next
 
-ADD extra/requirements.txt /tmp/
+ADD python/requirements.txt /tmp/
 
 RUN apt-get update \
     && apt-get upgrade -yq --no-install-recommends \
