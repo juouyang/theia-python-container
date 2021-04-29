@@ -1,4 +1,4 @@
-# theia-python:aicots with nginx reverse proxy
+# theia-python with nginx reverse proxy
 
 ## Build and Run
 ```
