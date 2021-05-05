@@ -62,7 +62,8 @@ RUN apt-get update \
     && apt-get auto-remove -y \
     && rm -rf /var/cache/apt/* \
     && rm -rf /var/lib/apt/lists/* \
-    && rm -rf /tmp/*
+    && rm -rf /tmp/* \
+    && update-alternatives --install /usr/bin/python python /usr/local/bin/python3.8 99
 
 COPY proxy/ssl/dev.net.key /etc/nginx/certificates/key.pem
 COPY proxy/ssl/dev.net.crt /etc/nginx/certificates/cert.pem
