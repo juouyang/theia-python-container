@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Start the first process
-sudo -H -u root nginx -g 'daemon on;'
+nginx -g 'daemon on;'
 status=$?
 if [ $status -ne 0 ]; then
   echo "Failed to start nginx: $status"

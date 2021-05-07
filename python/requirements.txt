@@ -8,3 +8,8 @@ getmac==0.8.2
 matplotlib
 pylint==2.7.4
 jupyter==1.0.0
+plotly==4.14.3
+kaleido
+futures
+configparser
+pylint==2.7.4
