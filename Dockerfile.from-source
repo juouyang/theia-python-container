@@ -59,7 +59,6 @@ RUN apt-get update \
 
 COPY proxy/ssl/dev.net.key /etc/nginx/certificates/key.pem
 COPY proxy/ssl/dev.net.crt /etc/nginx/certificates/cert.pem
-COPY proxy/default.conf /etc/nginx/conf.d
 COPY proxy/ssl.conf /etc/nginx/conf.d
 COPY proxy/common.conf /etc/nginx
 COPY proxy/nginx.conf /etc/nginx
