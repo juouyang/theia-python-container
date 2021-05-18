@@ -65,7 +65,7 @@ COPY proxy/nginx.conf /etc/nginx
 
 # Expose ports
 EXPOSE 443
-HEALTHCHECK --interval=300s --timeout=3s CMD curl -fs https://localhost/ || exit 1
+HEALTHCHECK --interval=300s --timeout=3s CMD curl -kfs https://localhost/ || exit 1
 
 RUN mkdir -p /home/theia \
     && mkdir -p /home/project
