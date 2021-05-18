@@ -49,6 +49,7 @@ RUN apt-get update \
                     ca-certificates \
                     openssl \
                     nginx \
+                    apache2-utils \
     && update-alternatives --install /usr/bin/python python /usr/local/bin/python3.8 99 \
     \
     && apt-get clean \
