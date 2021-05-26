@@ -10,16 +10,13 @@ docker run --rm -it -p 8443:443 theia-python:aicots
 
 https://localhost:8443
 
-https://pve.dev.net:8443
-
-https://192.168.233.136:8443
-
 
 ---
 
 ## To create crt and key with your own CA
 
 Refer proxy/ssl/README.md
+
 
 ---
 
