@@ -56,7 +56,7 @@ RUN apt-get update \
     && rm -rf /var/cache/apt/* \
     && rm -rf /var/lib/apt/lists/* \
     && rm -rf /tmp/* \
-    && python -m wget https://github.com/juouyang-aicots/py2docker/raw/main/mqtt_client_d1656173.tar -o /tmp/mqtt_client.tar \
+    && python -m wget https://github.com/juouyang-aicots/py2docker/raw/main/mqtt_client_b373dd4c.tar -o /tmp/mqtt_client.tar \
     && mkdir -p /usr/local/lib/python3.8/site-packages/mqtt_client/ \
     && tar -xf /tmp/mqtt_client.tar -C /usr/local/lib/python3.8/site-packages/mqtt_client/
 
