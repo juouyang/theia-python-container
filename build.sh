@@ -13,4 +13,4 @@ fi
 echo "Remove image with same tag ..."
 docker rmi $REPOSITORY_NAME:$TAG_NAME
 
-docker build . -t theia-python:aicots --file ./Dockerfile.from-source
+docker build . -t theia-python:aicots --file ./Dockerfile
