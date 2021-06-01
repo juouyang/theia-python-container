@@ -60,6 +60,17 @@ RUN apt-get update \
     && mkdir -p /usr/local/lib/python3.8/site-packages/mqtt_client/ \
     && tar -xf /tmp/mqtt_client.tar -C /usr/local/lib/python3.8/site-packages/mqtt_client/
 
+# install TA-lib, http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz
+COPY python/ta-lib-0.4.0-src.tar.gz /tmp/
+
+RUN tar -xzf /tmp/ta-lib-0.4.0-src.tar.gz -C /tmp \
+    && cd /tmp/ta-lib/ \
+    && ./configure --prefix=/usr \
+    && make \
+    && make install \
+    && pip3 install TA-Lib
+
+# Config NGINX
 COPY proxy/ssl/dev.net.key /etc/nginx/certificates/key.pem
 COPY proxy/ssl/dev.net.crt /etc/nginx/certificates/cert.pem
 COPY proxy/ssl.conf /etc/nginx/conf.d

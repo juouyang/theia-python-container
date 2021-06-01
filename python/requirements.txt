@@ -14,4 +14,5 @@ futures
 configparser
 pylint==2.7.4
 wget
-tensorflow
+numpy==1.19.2
+tensorflow==2.5.0
