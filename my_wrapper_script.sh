@@ -1,6 +1,9 @@
 #!/bin/bash
 
 # Start the first process
+if [ ! -z "$PASSWORD" ]; then
+  htpasswd -bc /etc/nginx/.htpasswd $USERNAME $PASSWORD
+fi
 nginx -g 'daemon on;'
 status=$?
 if [ $status -ne 0 ]; then
