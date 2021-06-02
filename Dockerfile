@@ -62,13 +62,15 @@ RUN apt-get update \
 
 # install TA-lib, http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz
 COPY python/ta-lib-0.4.0-src.tar.gz /tmp/
-
 RUN tar -xzf /tmp/ta-lib-0.4.0-src.tar.gz -C /tmp \
     && cd /tmp/ta-lib/ \
     && ./configure --prefix=/usr \
     && make \
     && make install \
     && pip3 install TA-Lib
+
+# install PyTorch
+RUN pip3 install torch==1.8.1+cpu torchvision==0.9.1+cpu torchaudio==0.8.1 -f https://download.pytorch.org/whl/torch_stable.html
 
 # Config NGINX
 COPY proxy/ssl/dev.net.key /etc/nginx/certificates/key.pem
