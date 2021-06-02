@@ -3,6 +3,9 @@
 # Start the first process
 if [ ! -z "$PASSWORD" ]; then
   htpasswd -bc /etc/nginx/.htpasswd $USERNAME $PASSWORD
+  sed -i '/TEXT_TO_BE_REPLACED/c\auth_basic on;auth_basic_user_file /etc/nginx/.htpasswd;' /etc/nginx/common.conf
+else
+  sed -i '/TEXT_TO_BE_REPLACED/c\' /etc/nginx/common.conf
 fi
 nginx -g 'daemon on;'
 status=$?
