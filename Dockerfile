@@ -58,11 +58,6 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/* \
     && rm -rf /tmp/*
 
-# install aicots mqtt_client library
-RUN python -m wget https://github.com/juouyang-aicots/py2docker/raw/main/mqtt_client_7b1e5603.tar -o /tmp/mqtt_client.tar \
-    && mkdir -p /usr/local/lib/python3.8/site-packages/mqtt_client/ \
-    && tar -xf /tmp/mqtt_client.tar -C /usr/local/lib/python3.8/site-packages/mqtt_client/
-
 # install TA-lib, http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz
 COPY python/ta-lib-0.4.0-src.tar.gz /tmp/
 RUN tar -xzf /tmp/ta-lib-0.4.0-src.tar.gz -C /tmp \
@@ -101,3 +96,8 @@ ENV THEIA_WEBVIEW_EXTERNAL_ENDPOINT="{{hostname}}"
 COPY my_wrapper_script.sh my_wrapper_script.sh
 CMD bash
 ENTRYPOINT ./my_wrapper_script.sh
+
+# install aicots mqtt_client library
+RUN python -m wget https://github.com/juouyang-aicots/py2docker/raw/main/mqtt_client_b671ef5b.tar -o /tmp/mqtt_client.tar \
+    && mkdir -p /usr/local/lib/python3.8/site-packages/mqtt_client/ \
+    && tar -xf /tmp/mqtt_client.tar -C /usr/local/lib/python3.8/site-packages/mqtt_client/
