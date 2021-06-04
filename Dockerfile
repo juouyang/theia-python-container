@@ -56,8 +56,10 @@ RUN apt-get update \
     && apt-get auto-remove -y \
     && rm -rf /var/cache/apt/* \
     && rm -rf /var/lib/apt/lists/* \
-    && rm -rf /tmp/* \
-    && python -m wget https://github.com/juouyang-aicots/py2docker/raw/main/mqtt_client_6f3feea3.tar -o /tmp/mqtt_client.tar \
+    && rm -rf /tmp/*
+
+# install aicots mqtt_client library
+RUN python -m wget https://github.com/juouyang-aicots/py2docker/raw/main/mqtt_client_7b1e5603.tar -o /tmp/mqtt_client.tar \
     && mkdir -p /usr/local/lib/python3.8/site-packages/mqtt_client/ \
     && tar -xf /tmp/mqtt_client.tar -C /usr/local/lib/python3.8/site-packages/mqtt_client/
 
