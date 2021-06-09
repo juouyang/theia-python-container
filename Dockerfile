@@ -98,6 +98,6 @@ CMD bash
 ENTRYPOINT ./my_wrapper_script.sh
 
 # install aicots mqtt_client library
-RUN python -m wget https://github.com/juouyang-aicots/py2docker/raw/main/mqtt_client_04c2f0c4.tar -o /tmp/mqtt_client.tar \
+RUN python -m wget https://github.com/juouyang-aicots/py2docker/raw/main/mqtt_client_1f5f0d0b.tar -o /tmp/mqtt_client.tar \
     && mkdir -p /usr/local/lib/python3.8/site-packages/mqtt_client/ \
     && tar -xf /tmp/mqtt_client.tar -C /usr/local/lib/python3.8/site-packages/mqtt_client/
