@@ -50,6 +50,7 @@ RUN apt-get update \
                     openssl \
                     nginx \
                     apache2-utils \
+                    libsecret-1-0 \
     && update-alternatives --install /usr/bin/python python /usr/local/bin/python3.8 99 \
     \
     && apt-get clean \
