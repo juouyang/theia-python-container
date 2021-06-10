@@ -4,6 +4,9 @@ https://drive.google.com/file/d/13JaBX5NRyG7zzX2ajtHPEhRaFJYPHNMO/view?usp=shari
 
 ## Build and Run
 ```
+cd python
+bash update_mqtt_client.sh
+cd -
 bash build.sh
 docker run --rm -it -p 8443:443 theia-python:aicots
 ```
@@ -11,6 +14,17 @@ docker run --rm -it -p 8443:443 theia-python:aicots
 ## Open
 
 https://localhost:8443
+
+
+
+## Update mqtt_client and rebuild
+
+```
+cd python
+bash update_mqtt_client.sh
+cd -
+docker build . -t theia-python:aicots --file ./Dockerfile
+```
 
 
 ---
