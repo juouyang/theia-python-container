@@ -78,3 +78,15 @@ https://stackoverflow.com/questions/7580508/getting-chrome-to-accept-self-signed
 https://stackoverflow.com/questions/44550970/firefox-54-stopped-trusting-self-signed-certs
 
 https://deliciousbrains.com/ssl-certificate-authority-for-local-https-development/
+
+
+---
+
+
+2021-07-01: Create pfx for IIS server
+
+```
+openssl pkcs12 -inkey dev.net.key -in dev.net.crt -certfile myCA.pem -export -out dev.net.pfx
+```
+
+
