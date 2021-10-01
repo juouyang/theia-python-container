@@ -60,14 +60,9 @@ openssl x509 -req -in $NAME.csr -CA myCA.pem -CAkey myCA.key -CAcreateserial \
 
 You can check your work to ensure that the certificate is built correctly:
 
-openssl verify -CAfile myCA.pem -verify_hostname bar.mydomain.com mydomain.com.crt
-
-
-
-
-
-
-
+```
+openssl verify -verbose -CAfile <(cat ../myCA.pem) -purpose sslclient bar.$NAME $NAME.crt
+```
 
 
 
