@@ -5,6 +5,14 @@ ARG version=next
 WORKDIR /home/theia
 ADD $version.package.json ./package.json
 ARG GITHUB_TOKEN
+RUN apt-get update \
+    && apt-get upgrade -y \
+    && apt-get install -y libsecret-1-dev \
+    && apt-get clean \
+    && apt-get auto-remove -y \
+    && rm -rf /var/cache/apt/* \
+    && rm -rf /var/lib/apt/lists/* \
+    && rm -rf /tmp/*
 RUN yarn --pure-lockfile && \
     NODE_OPTIONS="--max_old_space_size=4096" yarn theia build && \
     yarn theia download:plugins && \
@@ -97,6 +105,3 @@ ENV THEIA_WEBVIEW_EXTERNAL_ENDPOINT="{{hostname}}"
 COPY my_wrapper_script.sh my_wrapper_script.sh
 CMD bash
 ENTRYPOINT ./my_wrapper_script.sh
-
-# install aicots mqtt_client library
-ADD python/Doquant/mqtt_client /usr/local/lib/python3.8/site-packages/mqtt_client/

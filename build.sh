@@ -1,7 +1,7 @@
 #!/bin/bash
 
 REPOSITORY_NAME="theia-python"
-TAG_NAME="aicots"
+TAG_NAME="ai"
 
 if [[ $(docker ps -a -q  --filter ancestor=$REPOSITORY_NAME:$TAG_NAME) ]]; then
     echo "Stop and remove running containers..."
@@ -11,6 +11,6 @@ if [[ $(docker ps -a -q  --filter ancestor=$REPOSITORY_NAME:$TAG_NAME) ]]; then
 fi
 
 echo "Remove image with same tag ..."
-docker rmi $REPOSITORY_NAME:$TAG_NAME
+docker rmi $REPOSITORY_NAME:$TAG_NAME 2> /dev/null
 
-docker build . -t theia-python:aicots --file ./Dockerfile
+docker build . -t $REPOSITORY_NAME:$TAG_NAME --file ./Dockerfile
