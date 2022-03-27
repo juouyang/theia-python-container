@@ -5,7 +5,7 @@ https://drive.google.com/file/d/13JaBX5NRyG7zzX2ajtHPEhRaFJYPHNMO/view?usp=shari
 ## Build and Run
 ```
 bash build.sh
-docker run --rm -it -p 8443:443 theia-python:ai
+docker run --rm -it -p 8443:443 theia-python:dev
 ```
 
 ## Open
@@ -17,7 +17,7 @@ https://localhost:8443
 ## Rebuild
 
 ```
-docker build . -t theia-python:ai --file ./Dockerfile
+docker build . -t theia-python:dev --file ./Dockerfile
 ```
 
 
