@@ -1,18 +1,12 @@
-ARG NODE_VERSION=12.18.3
+ARG NODE_VERSION=14.19.1
 
 FROM node:${NODE_VERSION}
+RUN npm install socket.io ws filenamify
+RUN apt-get update && apt-get install -y libsecret-1-dev
 ARG version=next
 WORKDIR /home/theia
 ADD $version.package.json ./package.json
 ARG GITHUB_TOKEN
-RUN apt-get update \
-    && apt-get upgrade -y \
-    && apt-get install -y libsecret-1-dev \
-    && apt-get clean \
-    && apt-get auto-remove -y \
-    && rm -rf /var/cache/apt/* \
-    && rm -rf /var/lib/apt/lists/* \
-    && rm -rf /tmp/*
 RUN yarn --pure-lockfile && \
     NODE_OPTIONS="--max_old_space_size=4096" yarn theia build && \
     yarn theia download:plugins && \
@@ -46,7 +40,9 @@ RUN apt-get update \
 
 ADD python/requirements.txt /tmp/
 
+RUN npm install socket.io ws filenamify
 RUN apt-get update \
+    && apt-get install -y libsecret-1-0 \
     && apt-get install -y python3-dev python3-pip \
     && pip3 install --upgrade pip \
     && pip3 install python-language-server flake8 autopep8 \
@@ -105,3 +101,4 @@ ENV THEIA_WEBVIEW_EXTERNAL_ENDPOINT="{{hostname}}"
 COPY my_wrapper_script.sh my_wrapper_script.sh
 CMD bash
 ENTRYPOINT ./my_wrapper_script.sh
+EXPOSE 3000
