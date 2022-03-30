@@ -1,6 +1,7 @@
 # theia-python with nginx reverse proxy
 
 This is a theia container image for the development of python.
+![Screenshot](https://user-images.githubusercontent.com/80164/160885529-e7dab1b0-55cb-414b-a8c7-9c6445fd0e3a.png)
 
 ## Build (will cleanup previous containers and images)
 ```
