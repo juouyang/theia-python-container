@@ -1,4 +1,4 @@
-ARG NODE_VERSION=14.19.1
+ARG NODE_VERSION=12.18.3
 
 FROM node:${NODE_VERSION}
 RUN npm install socket.io ws filenamify
