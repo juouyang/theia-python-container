@@ -1,5 +1,5 @@
 {
-    "source_url": "https://github.com/theia-ide/theia-apps/blob/master/theia-python-docker/next.package.json",
+    "source_url": "https://github.com/theia-ide/theia-apps/blob/master/theia-python-docker/latest.package.json",
     "private": true,
     "theia": {
         "frontend": {
@@ -12,22 +12,24 @@
         }
     },
     "dependencies": {
-        "@theia/editor-preview": "next",
-        "@theia/file-search": "next",
-        "@theia/getting-started": "next",
-        "@theia/git": "next",
-        "@theia/markers": "next",
-        "@theia/messages": "next",
-        "@theia/navigator": "next",
-        "@theia/plugin-ext-vscode": "next",
-        "@theia/preferences": "next",
-        "@theia/preview": "next",
-        "@theia/search-in-workspace": "next",
-        "@theia/terminal": "next",
-        "@theia/vsx-registry": "next"
+        "@theia/editor-preview": "latest",
+        "@theia/file-search": "latest",
+        "@theia/getting-started": "latest",
+        "@theia/git": "latest",
+        "@theia/markers": "latest",
+        "@theia/messages": "latest",
+        "@theia/monaco": "latest",
+        "@theia/navigator": "latest",
+        "@theia/outline-view": "latest",
+        "@theia/plugin-ext-vscode": "latest",
+        "@theia/preferences": "latest",
+        "@theia/preview": "latest",
+        "@theia/search-in-workspace": "latest",
+        "@theia/terminal": "latest",
+        "@theia/vsx-registry": "latest"
     },
     "devDependencies": {
-        "@theia/cli": "next"
+        "@theia/cli": "latest"
     },
     "scripts": {
         "preinstall": "node-gyp install"
@@ -98,7 +100,6 @@
         "vscode-builtin-xml": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/xml-1.39.1-prel.vsix",
         "vscode-builtin-yaml": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/yaml-1.39.1-prel.vsix",
         "vscode-editorconfig": "https://github.com/theia-ide/editorconfig-vscode/releases/download/v0.14.4/EditorConfig-0.14.4.vsix",
-        "vscode-python": "https://open-vsx.org/api/ms-python/python/2020.10.332292344/file/ms-python.python-2020.10.332292344.vsix",
-        "vscode-builtin-image-preview": "https://open-vsx.org/api/vscode/image-preview/1.57.0-next.cdf318e1e21/file/vscode.image-preview-1.57.0-next.cdf318e1e21.vsix"
+        "vscode-python": "https://open-vsx.org/api/ms-python/python/2020.10.332292344/file/ms-python.python-2020.10.332292344.vsix"
     }
 }

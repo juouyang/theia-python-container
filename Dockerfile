@@ -3,7 +3,7 @@ ARG NODE_VERSION=12.18.3
 FROM node:${NODE_VERSION}
 RUN npm install socket.io ws filenamify
 RUN apt-get update && apt-get install -y libsecret-1-dev
-ARG version=next
+ARG version=latest
 WORKDIR /home/theia
 ADD $version.package.json ./package.json
 ARG GITHUB_TOKEN
