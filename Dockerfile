@@ -101,4 +101,3 @@ ENV THEIA_WEBVIEW_EXTERNAL_ENDPOINT="{{hostname}}"
 COPY my_wrapper_script.sh my_wrapper_script.sh
 CMD bash
 ENTRYPOINT ./my_wrapper_script.sh
-EXPOSE 3000
