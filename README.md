@@ -67,7 +67,7 @@ browse https://pve.dev.net:8443
 
 ---
 
-## Modifications of next.package.json
+## Modifications of $version.package.json
 
 Change
 ```
