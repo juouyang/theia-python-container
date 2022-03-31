@@ -33,7 +33,7 @@ sudo chmod 755 /usr/local/share/ca-certificates/pve.dev.net
 sudo cp ./proxy/ssl/myCA.pem /usr/local/share/ca-certificates/pve.dev.net/myCA.pem
 sudo chmod 644 /usr/local/share/ca-certificates/pve.dev.net/myCA.pem
 sudo update-ca-certificates
-echo '127.0.0.1 pve.dev.net | sudo tee -a /etc/hosts
+echo '127.0.0.1 pve.dev.net' | sudo tee -a /etc/hosts
 ```
 
 browse https://pve.dev.net:8443
