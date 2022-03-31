@@ -3,21 +3,25 @@
 This is a theia container image for the development of python.
 ![Screenshot](https://user-images.githubusercontent.com/80164/160885529-e7dab1b0-55cb-414b-a8c7-9c6445fd0e3a.png)
 
-## Build (will cleanup previous containers and images)
+## Clean and Build
 ```
 bash build.sh
+```
+
+## Build
+```
+docker build . -t theia-python:dev --file ./Dockerfile
 ```
 
 ## Run
 ```
 docker run --rm -it -p 8443:443 theia-python:dev
 ```
-
-## Rebuild (incremental updates, without cleanup previous images)
-
+or
 ```
-docker build . -t theia-python:dev --file ./Dockerfile
+docker run --rm -it -p 8443:443 juouyang/theia-python:dev 
 ```
+
 
 ## Test
 
@@ -41,6 +45,8 @@ browse https://pve.dev.net:8443
 ---
 
 ### Features
+
+Jupiter Notebook for Plot Diagram
 
 * Statistic library
 
