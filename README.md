@@ -17,9 +17,9 @@ docker build . -t theia-python:dev --file ./Dockerfile
 ```
 docker run --rm -it -p 8443:443 theia-python:dev
 ```
-or
+
 ```
-docker run --rm -it -p 8443:443 juouyang/theia-python:dev 
+docker run --rm -it -p 8443:443 -v $(PWD)/python/sample-project/demo:/home/project/demo juouyang/theia-python:dev
 ```
 
 
@@ -44,9 +44,9 @@ browse https://pve.dev.net:8443
 
 ---
 
-### Features
+### Features:
 
-Jupiter Notebook for Plot Diagram
+* Jupiter Notebook for Plot Diagram
 
 * Statistic library
 
